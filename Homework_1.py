@@ -1,5 +1,5 @@
-# Name:
-# SBUID: 
+# Name:Dahyun Eom
+# SBUID:115943034
 
 # Remove the ellipses (...) when writing your solutions.
 
@@ -7,11 +7,30 @@
 # ----------------- Convert Fahrenheit to Celsius -------------------------------
 # TODO: Complete the implementation of fahrenheit2celsius () and what_to_wear(). 
 
-def fahrenheit2celsius(fahrenheit): 
-   ...
+def fahrenheit2celsius(fahrenheit):
+    return 5/9*(fahrenheit-32)
+fahrenheit = int(input("Type the temperature in fahrenheit:"))
+print (fahrenheit2celsius(fahrenheit))
 
 def what_to_wear(celsius):
-   ...
+    if (celsius < -10):
+        print("wear puffy jacket")
+        
+    if (-10 <= celsius < 0):
+        print("wear scarf")
+    
+    if (0 <= celsius < 10):
+        print("wear sweater")
+        
+    if (10 <= celsius < 20):
+        print("wear light jacket")
+        
+    if (20 <= celsius ):
+        print("wear t-shrit")
+
+celsius = int(input("type celsius:"))
+print(what_to_wear(celsius))
+
 
 # ---------------------------- Exercise II --------------------------------------
 # ----------------- Area and perimeter of a triangle  ---------------------------
