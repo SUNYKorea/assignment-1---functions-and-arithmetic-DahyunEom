@@ -16,20 +16,20 @@ def what_to_wear(celsius):
     if (celsius < -10):
         print("wear puffy jacket")
         
-    if (-10 <= celsius < 0):
+    elif(-10 <= celsius < 0):
         print("wear scarf")
     
-    if (0 <= celsius < 10):
+    elif (0 <= celsius < 10):
         print("wear sweater")
         
-    if (10 <= celsius < 20):
+    elif (10 <= celsius < 20):
         print("wear light jacket")
         
-    if (20 <= celsius ):
+    elif (20 <= celsius ):
         print("wear t-shrit")
 
 celsius = int(input("type celsius:"))
-print(what_to_wear(celsius))
+what_to_wear(celsius)
 
 
 # ---------------------------- Exercise II --------------------------------------
@@ -38,10 +38,13 @@ print(what_to_wear(celsius))
 # compute_triangle_perimeter from scratch  
 
 def shoelace_triangle_area(x1, y1, x2, y2, x3, y3):
-    ...
+    return (( x1*y2 + x2*y3 + x3*y1 ) - (x1*y3 + x2*y1 +x3*y2)) / 2
+
+x1, x2, x3, y1, y2, y3 = int(input("type:"))      #절댓값, 왜 int/str안 될까
+
 
 def euclidean_distance(x1, y1, x2, y2):
-    ...
+    return 
 
 def compute_triangle_perimeter(x1, y1, x2, y2, x3, y3):
     ...
@@ -71,6 +74,8 @@ fahrenheit = 40
 what_to_wear(fahrenheit2celsius(fahrenheit))
 
 # Exercise 2 test
+# 주어진 값을 사용하는건지, 사용자에게서 값을 받는 것인지 확실하지 않아서 두번쨰 케이스는 주석으로 달아둡니다. 
+#
 x1, x2, x3, y1, y2, y3 = -4, -5, 3, -4, 5, -3 # declaration of the vertices of the triangle
 area = shoelace_triangle_area(x1, y1, x2, y2, x3, y3)
 perimeter = compute_triangle_perimeter(x1, y1, x2, y2, x3, y3)
