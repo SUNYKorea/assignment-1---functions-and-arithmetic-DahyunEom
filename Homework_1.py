@@ -1,6 +1,5 @@
 # Name:Dahyun Eom
 # SBUID:115943034
-
 # Remove the ellipses (...) when writing your solutions.
 
 # ---------------------------- Exercise I ---------------------------------------
@@ -9,8 +8,10 @@
 
 def fahrenheit2celsius(fahrenheit):
     return 5/9*(fahrenheit-32)
+
 fahrenheit = int(input("Type the temperature in fahrenheit:"))
-print (fahrenheit2celsius(fahrenheit))
+celsius = fahrenheit2celsius(fahrenheit)
+print (celsius)
 
 def what_to_wear(celsius):
     if (celsius < -10):
@@ -27,8 +28,8 @@ def what_to_wear(celsius):
         
     elif (20 <= celsius ):
         print("wear t-shrit")
+    return celsius
 
-celsius = int(input("type celsius:"))
 what_to_wear(celsius)
 
 
@@ -38,28 +39,46 @@ what_to_wear(celsius)
 # compute_triangle_perimeter from scratch  
 
 def shoelace_triangle_area(x1, y1, x2, y2, x3, y3):
-    return (( x1*y2 + x2*y3 + x3*y1 ) - (x1*y3 + x2*y1 +x3*y2)) / 2
-
-x1, x2, x3, y1, y2, y3 = int(input("type:"))      #절댓값, 왜 int/str안 될까
-
+    result = abs((( x1*y2 + x2*y3 + x3*y1 ) - (x1*y3 + x2*y1 +x3*y2)) / 2)
+    return result
 
 def euclidean_distance(x1, y1, x2, y2):
-    return 
+    distance = ((x1 - x2)**2 + (y1 - y2)**2)**(0.5)
+    return distance
 
 def compute_triangle_perimeter(x1, y1, x2, y2, x3, y3):
-    ...
+    triangle_perimeter = ((x1 - x2)**2 + (y1 - y2)**2)**(0.5) + ((x2 - x3)**2 + (y2 - y3)**2)**(0.5) + ((x1 - x3)**2 + (y1 - y3)**2)**(0.5)
+    return triangle_perimeter
 
+x1 = int(input("type x1:"))
+x2 = int(input("type x2:"))
+x3 = int(input("type x3:"))
+y1 = int(input("type y1:"))
+y2 = int(input("type y2:"))
+y3 = int(input("type y3:"))
+print(shoelace_triangle_area(x1, y1, x2, y2, x3, y3))
 
 # ---------------------------- Exercise III -------------------------------------
 # ----------------- Compute the area of a regular polygon -----------------------
 # TODO: Fill the functions deg2rad, apothem  and polygon_area 
 
 
+import math
 def deg2rad(deg):
-    ...
+    a = deg*(math.pi/180)
+    return a
 
+deg = int(input("type degree:" ))
+print(deg2rad(deg))
+
+import math
 def apothem(number_sides, length_side):
-   ...
+   b = (length_side / 2* math.tan(180/number_sides))
+   return b
+number_sides = int(input("type the number of sides in the polygon: "))
+length_side = int(input("type the length of side in the polygon: "))
+
+
 
 def polygon_area(number_sides, length_side):
    ...
@@ -73,13 +92,13 @@ def polygon_area(number_sides, length_side):
 fahrenheit = 40
 what_to_wear(fahrenheit2celsius(fahrenheit))
 
+
 # Exercise 2 test
-# 주어진 값을 사용하는건지, 사용자에게서 값을 받는 것인지 확실하지 않아서 두번쨰 케이스는 주석으로 달아둡니다. 
-#
 x1, x2, x3, y1, y2, y3 = -4, -5, 3, -4, 5, -3 # declaration of the vertices of the triangle
 area = shoelace_triangle_area(x1, y1, x2, y2, x3, y3)
 perimeter = compute_triangle_perimeter(x1, y1, x2, y2, x3, y3)
 print("The area of the triangle is : " + str(area) + " , its perimeter is : " + str(perimeter) )
+
 
 # Exercise 3 test
 number_sides = 5
