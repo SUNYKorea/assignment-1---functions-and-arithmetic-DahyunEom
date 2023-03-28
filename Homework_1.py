@@ -38,6 +38,14 @@ what_to_wear(celsius)
 # TODO: Fill the functions shoelace_triangle_area, euclidean_distance and
 # compute_triangle_perimeter from scratch  
 
+
+x1 = int(input("type x1:"))
+x2 = int(input("type x2:"))
+x3 = int(input("type x3:"))
+y1 = int(input("type y1:"))
+y2 = int(input("type y2:"))
+y3 = int(input("type y3:"))
+
 def shoelace_triangle_area(x1, y1, x2, y2, x3, y3):
     result = abs((( x1*y2 + x2*y3 + x3*y1 ) - (x1*y3 + x2*y1 +x3*y2)) / 2)
     return result
@@ -50,18 +58,14 @@ def compute_triangle_perimeter(x1, y1, x2, y2, x3, y3):
     triangle_perimeter = ((x1 - x2)**2 + (y1 - y2)**2)**(0.5) + ((x2 - x3)**2 + (y2 - y3)**2)**(0.5) + ((x1 - x3)**2 + (y1 - y3)**2)**(0.5)
     return triangle_perimeter
 
-x1 = int(input("type x1:"))
-x2 = int(input("type x2:"))
-x3 = int(input("type x3:"))
-y1 = int(input("type y1:"))
-y2 = int(input("type y2:"))
-y3 = int(input("type y3:"))
-print(shoelace_triangle_area(x1, y1, x2, y2, x3, y3))
+area = shoelace_triangle_area(x1, y1, x2, y2, x3, y3)
+perimeter = compute_triangle_perimeter(x1, y1, x2, y2, x3, y3)
+print("The area of the triangle is : " + str(area) + " , its perimeter is : " + str(perimeter) )
+
 
 # ---------------------------- Exercise III -------------------------------------
 # ----------------- Compute the area of a regular polygon -----------------------
 # TODO: Fill the functions deg2rad, apothem  and polygon_area 
-
 
 import math
 def deg2rad(deg):
