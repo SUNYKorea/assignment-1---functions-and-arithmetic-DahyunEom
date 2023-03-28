@@ -50,7 +50,6 @@ def compute_triangle_perimeter(x1, y1, x2, y2, x3, y3):
     triangle_perimeter = ((x1 - x2)**2 + (y1 - y2)**2)**(0.5) + ((x2 - x3)**2 + (y2 - y3)**2)**(0.5) + ((x1 - x3)**2 + (y1 - y3)**2)**(0.5)
     return triangle_perimeter
 
-
 x1 = int(input("type x1:"))
 x2 = int(input("type x2:"))
 x3 = int(input("type x3:"))
@@ -58,9 +57,9 @@ y1 = int(input("type y1:"))
 y2 = int(input("type y2:"))
 y3 = int(input("type y3:"))
 
-
 area = shoelace_triangle_area(x1, y1, x2, y2, x3, y3)
 perimeter = compute_triangle_perimeter(x1, y1, x2, y2, x3, y3)
+
 print("The area of the triangle is : " + str(area) + " , its perimeter is : " + str(perimeter) )
 
 
@@ -84,6 +83,7 @@ def polygon_area(number_sides, length_side):
 
 number_sides = int(input("type the number of sides in the polygon: "))
 length_side = int(input("type the length of side in the polygon: "))
+
 print ("The area of the polygon is : " + str(polygon_area(number_sides, length_side)))
 
 
