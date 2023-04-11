@@ -1,7 +1,9 @@
 # Name:Dahyun Eom
 # SBUID:115943034
 # Remove the ellipses (...) when writing your solutions.
-
+##################### SCORE ######################
+####### Score:  8.5/10
+#################################################
 # ---------------------------- Exercise I ---------------------------------------
 # ----------------- Convert Fahrenheit to Celsius -------------------------------
 # TODO: Complete the implementation of fahrenheit2celsius () and what_to_wear(). 
@@ -39,18 +41,18 @@ what_to_wear(celsius)
 # compute_triangle_perimeter from scratch  
 
 def shoelace_triangle_area(x1, y1, x2, y2, x3, y3):
-    result = abs((( x1*y2 + x2*y3 + x3*y1 ) - (x1*y3 + x2*y1 +x3*y2)) / 2)
+    result = abs((( x1*y2 + x2*y3 + x3*y1 ) - (x1*y3 + x2*y1 +x3*y2)) / 2)# you create variables for input but write the entire equation in a line--> which is a bad programming practice-> use variables and function here!!!!
     return result
 
 def euclidean_distance(x1, y1, x2, y2):
-    distance = ((x1 - x2)**2 + (y1 - y2)**2)**(0.5)
+    distance = ((x1 - x2)**2 + (y1 - y2)**2)**(0.5)# you create variables for input but write the entire equation in a line--> which is a bad programming practice-> use variables and function here!!!!
     return distance
 
 def compute_triangle_perimeter(x1, y1, x2, y2, x3, y3):
-    triangle_perimeter = ((x1 - x2)**2 + (y1 - y2)**2)**(0.5) + ((x2 - x3)**2 + (y2 - y3)**2)**(0.5) + ((x1 - x3)**2 + (y1 - y3)**2)**(0.5)
+    triangle_perimeter = ((x1 - x2)**2 + (y1 - y2)**2)**(0.5) + ((x2 - x3)**2 + (y2 - y3)**2)**(0.5) + ((x1 - x3)**2 + (y1 - y3)**2)**(0.5) # you create variables for input but write the entire equation in a line--> which is a bad programming practice-> use variables and function here!!!!
     return triangle_perimeter
 
-x1 = int(input("type x1:"))
+x1 = int(input("type x1:")) # please use the predefined tests for the coding questions instead of adding your own.. thanks.
 x2 = int(input("type x2:"))
 x3 = int(input("type x3:"))
 y1 = int(input("type y1:"))
@@ -74,11 +76,11 @@ def deg2rad(deg):
     return a
 
 def apothem(number_sides, length_side):
-   b = (length_side / (math.tan(deg2rad(180 / number_sides))*2))
+   b = (length_side / (math.tan(deg2rad(180 / number_sides))*2)) # you create variables for input but write the entire equation in a line--> which is a bad programming practice-> use variables and function here!!!!
    return b
 
 def polygon_area(number_sides, length_side):
-    c = (number_sides*length_side*apothem(number_sides, length_side)) / 2
+    c = (number_sides*length_side*apothem(number_sides, length_side)) / 2 # you create variables for input but write the entire equation in a line--> which is a bad programming practice-> use variables and function here!!!!
     return c
 
 number_sides = int(input("type the number of sides in the polygon: "))
